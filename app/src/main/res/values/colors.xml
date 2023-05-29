@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="light_blue">#42a6eb</color>
+    <color name="black">#FF000000</color>
+    <color name="shallow_black">#bbbbbb</color>
+    <color name="theme_gray">#777777</color>
+    <color name="light_gray">#cccccc</color>
+    <color name="lightest_gray">#eeeeee</color>
+    <color name="lightest_gray2">#f1f1f1</color>
+    <color name="shallow_gray">#aaaaaa</color>
+    <color name="light_green">#99de99</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="maintheme">#Ff9D1E</color>
+    <color name="light_orange">#ffeedd</color>
+    <color name="orange">#FECBA0</color>
+    <color name="deepmaintheme">#Ff7D1E</color>
+    <color name="light_red">#edc0c3</color>
+    <color name="out_red">#ed3023</color>
+    <color name="darkblue">#3456a3</color>
+    <color name="gray">#fafafa</color>
+    <color name="light_black">#444444</color>
+
+    <color name="colorPrimary">#FFFFFF</color>
+    <color name="colorPrimaryDark">#FFFFFF</color>
+    <color name="colorAccent">#FFFFFF</color>
+    <color name="textInputLayout">#96ffffff</color>
+</resources>

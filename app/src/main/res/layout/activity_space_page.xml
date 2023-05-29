@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.notifications.NotificationsFragment">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infomations"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="20dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@drawable/pikachuar"/>
+
+        <TextView
+            android:id="@+id/nick_name"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="及你太美"
+            android:textColor="@color/black"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/tags"
+            app:layout_constraintEnd_toEndOf="@id/profile_image"
+            app:layout_constraintStart_toStartOf="@id/profile_image"
+            app:layout_constraintTop_toBottomOf="@id/profile_image"
+            app:layout_constraintVertical_bias="0.43" />
+
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="22岁"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/following_bar"
+            app:layout_constraintEnd_toEndOf="@id/following_bar"
+            app:layout_constraintBottom_toBottomOf="@id/nick_name"
+            android:textColor="@color/theme_gray"
+            android:textSize="15dp" />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="20dp"
+            app:layout_constraintStart_toEndOf="@id/age"
+            app:layout_constraintBottom_toBottomOf="@+id/age"
+            app:layout_constraintTop_toTopOf="@id/age"
+            android:layout_height="wrap_content">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:background="@color/light_gray"/>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/position"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="北京"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/line1"
+            app:layout_constraintBottom_toBottomOf="@id/nick_name"
+            android:textColor="@color/theme_gray"
+            android:textSize="15dp"  />
+
+        <LinearLayout
+            android:id="@+id/line2"
+            android:layout_width="20dp"
+            app:layout_constraintStart_toEndOf="@id/position"
+            app:layout_constraintBottom_toBottomOf="@+id/age"
+            app:layout_constraintTop_toTopOf="@id/age"
+            android:layout_height="wrap_content">
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+
+            <ImageView
+                android:layout_width="2dp"
+                android:layout_height="15dp"
+                android:background="@color/light_gray"/>
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+        </LinearLayout>
+        <ImageView
+            android:id="@+id/gender"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/man"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/line2"
+            app:layout_constraintBottom_toBottomOf="@id/age"
+            android:textColor="@color/theme_gray"
+            android:textSize="15dp"  />
+
+        <ImageView
+            android:id="@+id/mail"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/mail"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="@id/post_bar"
+            app:layout_constraintEnd_toEndOf="@id/post_bar"
+            app:layout_constraintBottom_toBottomOf="@id/age"
+            android:textColor="@color/theme_gray"
+            android:textSize="15dp"  />
+
+        <LinearLayout
+            android:id="@+id/following_bar"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@id/profile_image"
+            app:layout_constraintEnd_toStartOf="@+id/followers_bar"
+            android:orientation="vertical"
+            android:layout_marginStart="10dp"
+            app:layout_constraintTop_toTopOf="@+id/profile_image">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="19dp"/>
+            <TextView
+                android:id="@+id/following"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                android:text="关注"
+                android:textSize="12dp"
+                android:textColor="@color/theme_gray"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/followers_bar"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/following_bar"
+            app:layout_constraintEnd_toStartOf="@+id/post_bar"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/profile_image">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="231"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="19dp"/>
+            <TextView
+                android:id="@+id/followers"
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image"
+                android:text="粉丝"
+                android:textSize="12dp"
+                android:textColor="@color/theme_gray"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/post_bar"
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/followers_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:orientation="vertical"
+            app:layout_constraintTop_toTopOf="@id/profile_image">
+
+            <TextView
+                android:layout_gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="123"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="19dp"/>
+
+            <TextView
+                android:id="@+id/post"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="动态"
+                android:textColor="@color/theme_gray"
+                android:textSize="12dp"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+        </LinearLayout>
+        <androidx.cardview.widget.CardView
+            android:layout_width="70dp"
+            app:layout_constraintEnd_toEndOf="@+id/post_bar"
+            app:layout_constraintStart_toStartOf="@+id/post_bar"
+            app:layout_constraintBottom_toBottomOf="@+id/ID_view"
+            android:layout_height="26dp"
+            app:cardCornerRadius="20dp"
+            android:backgroundTint="@color/maintheme">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="关 注"
+                android:textSize="14dp"
+                android:gravity="center"
+
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_marginBottom="10dp"
+            android:id="@+id/ID_view"
+            android:layout_width="90dp"
+            android:layout_height="40dp"
+            app:layout_constraintStart_toStartOf="@id/following_bar"
+            app:layout_constraintEnd_toEndOf="@id/followers_bar"
+            app:layout_constraintBottom_toBottomOf="@id/profile_image"
+            android:backgroundTint="@color/light_orange"
+            app:cardCornerRadius="15dp">
+            <TextView
+                android:id="@+id/user_account"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="ID: 859961408"
+                android:gravity="center"
+                android:textColor="@color/maintheme"
+                android:textSize="12dp" />
+
+        </androidx.cardview.widget.CardView>
+        <HorizontalScrollView
+            android:id="@+id/tags"
+            android:layout_marginBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scrollbars="none"
+            app:layout_constraintBottom_toBottomOf="parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:backgroundTint="@color/light_gray"
+
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:text="唱"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_orange"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:text="跳"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_green"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:text="Rap"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_red"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:text="🏀"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:backgroundTint="@color/light_gray"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:gravity="center"
+                        android:text="唱"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_orange"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:gravity="center"
+                        android:text="跳"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_green"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:gravity="center"
+                        android:text="Rap"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_red"
+                    app:cardCornerRadius="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:textAlignment="center"
+                        android:gravity="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:text="🏀"
+                        android:textColor="@color/white"/>
+                </androidx.cardview.widget.CardView>
+                <androidx.cardview.widget.CardView
+                    android:layout_width="@dimen/tags_width"
+                    android:layout_height="@dimen/tags_height"
+                    android:layout_marginStart="@dimen/tags_gap"
+                    android:backgroundTint="@color/light_gray"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textSize="@dimen/tags_txt_size"
+                        android:text="唱"
+                        android:textAlignment="center"
+                        android:textColor="@color/white" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!--        <ImageView-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="10dp"-->
+        <!--            android:background="@color/lightest_gray"-->
+        <!--            app:layout_constraintTop_toBottomOf="@id/tags"-->
+        <!--            app:layout_constraintStart_toStartOf="parent"-->
+        <!--            app:layout_constraintEnd_toEndOf="parent"/>-->
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+<!--    <androidx.constraintlayout.widget.ConstraintLayout-->
+<!--        android:id="@+id/infomations"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="200dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent">-->
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:id="@+id/profile_image"-->
+<!--            app:civ_border_color="@color/maintheme"-->
+<!--            app:civ_border_width="2dp"-->
+<!--            android:layout_width="50dp"-->
+<!--            android:layout_height="50dp"-->
+<!--            android:layout_margin="20dp"-->
+<!--            app:layout_constraintTop_toTopOf="parent"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            android:src="@drawable/pikachuar"/>-->
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/following_bar"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toEndOf="@id/profile_image"-->
+<!--            android:orientation="vertical"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            app:layout_constraintTop_toTopOf="@+id/profile_image">-->
+
+<!--            <TextView-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="123"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="19dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/following"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/profile_image"-->
+<!--                android:text="关注"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textColor="@color/theme_gray"/>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/followers_bar"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/following_bar"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintTop_toTopOf="@id/profile_image">-->
+
+<!--            <TextView-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="231"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="19dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/followers"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/profile_image"-->
+<!--                android:text="粉丝"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textColor="@color/theme_gray"/>-->
+
+<!--        </LinearLayout>-->
+<!--        <LinearLayout-->
+<!--            android:id="@+id/post_bar"-->
+<!--            android:layout_width="60dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/followers_bar"-->
+<!--            android:orientation="vertical"-->
+<!--            app:layout_constraintTop_toTopOf="@id/profile_image">-->
+
+<!--            <TextView-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="123"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:textStyle="bold"-->
+<!--                android:textSize="19dp"/>-->
+<!--            <TextView-->
+<!--                android:id="@+id/post"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                app:layout_constraintTop_toBottomOf="@+id/profile_image"-->
+<!--                android:text="动态"-->
+<!--                android:textSize="12dp"-->
+<!--                android:textColor="@color/theme_gray"/>-->
+
+<!--        </LinearLayout>-->
+
+
+<!--        <androidx.cardview.widget.CardView-->
+<!--            android:layout_marginBottom="5dp"-->
+<!--            android:id="@+id/follow_btn"-->
+<!--            android:layout_width="90dp"-->
+<!--            android:layout_height="40dp"-->
+<!--            app:layout_constraintStart_toStartOf="@id/following_bar"-->
+<!--            app:layout_constraintEnd_toEndOf="@id/followers_bar"-->
+<!--            app:layout_constraintBottom_toBottomOf="@id/profile_image"-->
+<!--            android:backgroundTint="@color/light_orange"-->
+<!--            app:cardCornerRadius="15dp">-->
+<!--            <TextView-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:text="关  注"-->
+<!--                android:textAlignment="center"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/deepmaintheme"-->
+<!--                android:textSize="18dp"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--        </androidx.cardview.widget.CardView>-->
+
+
+<!--    </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

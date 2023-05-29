@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".DetailedPostActivity">
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_marginBottom="55dp"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:orientation="vertical"
+            android:background="@color/white"
+            tools:ignore="MissingClass">
+            <LinearLayout
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:orientation="horizontal">
+                <!--        <de.hdodenhof.circleimageview.CircleImageView-->
+                <!--            android:layout_width="30dp"-->
+                <!--            android:layout_height="30dp"-->
+                <!--            android:src="@drawable/pikachuar"/>-->
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profile_pic"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/pikachuar"/>
+                <LinearLayout
+                    android:layout_marginStart="5dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/author_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="18dp"
+                        android:text="KunKun"
+                        android:textColor="@color/black"
+                        android:textSize="12dp"/>
+                    <TextView
+                        android:id="@+id/date_text_view"
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:text="2022-3-15"
+                        android:textSize="9dp"
+                        android:textColor="@color/theme_gray"/>
+                </LinearLayout>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="70dp"
+                    android:layout_height="26dp"
+                    app:cardCornerRadius="20dp"
+                    android:backgroundTint="@color/maintheme">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="关 注"
+                        android:textSize="14dp"
+                        android:gravity="center"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"/>
+                </androidx.cardview.widget.CardView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="25dp"
+                    android:src="@drawable/more"/>
+
+
+
+
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/lightest_gray"/>
+            <TextView
+                android:id="@+id/title_text_view"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <FrameLayout
+                android:id="@+id/post_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+<!--                <ImageView-->
+<!--                    android:id="@+id/image_view"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:scaleType="fitStart"-->
+<!--                    android:layout_marginBottom="20dp"/>-->
+
+
+                <com.smarteist.autoimageslider.SliderView
+                    android:id="@+id/imageSlider"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    app:sliderAnimationDuration="600"
+                    app:sliderAutoCycleDirection="back_and_forth"
+                    app:sliderAutoCycleEnabled="false"
+                    app:sliderIndicatorAnimationDuration="600"
+                    app:sliderIndicatorGravity="center_horizontal|bottom"
+                    app:sliderIndicatorMarginBottom="5dp"
+                    app:sliderIndicatorOrientation="horizontal"
+                    app:sliderIndicatorPadding="2dp"
+                    app:sliderIndicatorRadius="2dp"
+                    app:sliderIndicatorSelectedColor="@color/deepmaintheme"
+                    app:sliderIndicatorUnselectedColor="#FFF"
+                    app:sliderScrollTimeInSec="1"
+                    app:sliderStartAutoCycle="false" />
+
+<!--            <com.potyvideo.slider.library.SliderLayout-->
+<!--                android:id="@+id/slider"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="200dp"/>-->
+<!--            <com.potyvideo.slider.library.Indicators.PagerIndicator-->
+<!--                android:id="@+id/custom_indicator"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:gravity="center"/>-->
+<!--            <ImageView-->
+<!--                android:id="@+id/post_picture"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:scaleType="fitCenter"/>-->
+            <TextView
+                android:id="@+id/text_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/black"
+                android:textSize="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+            <LinearLayout
+                android:id="@+id/position_info"
+                android:padding="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <ImageView
+                    android:layout_width="17dp"
+                    android:layout_height="17dp"
+                    android:src="@drawable/post_position"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="17dp"
+                    android:text="北京"
+                    android:textSize="12dp"
+                    android:textAlignment="center"
+                    android:gravity="center"
+                    android:layout_marginStart="2dp"
+                    android:textColor="@color/light_black"/>
+            </LinearLayout>
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/lightest_gray"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:id="@+id/comment_nums"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:padding="8dp"
+                android:textColor="@color/theme_gray"
+                android:text="共0条评论"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/comments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/tools_bottom"
+        android:background="@color/lightest_gray"/>
+    <LinearLayout
+        android:padding="4dp"
+        android:id="@+id/tools_bottom"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="40dp">
+        <androidx.cardview.widget.CardView
+            android:id="@+id/comment"
+            android:layout_width="100dp"
+            android:layout_height="26dp"
+            app:cardBackgroundColor="@color/lightest_gray"
+            android:layout_marginStart="10dp"
+            app:cardCornerRadius="10dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="评论两句..."
+                android:textSize="14dp"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textColor="@color/light_gray"
+                android:textStyle="bold"/>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/up"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/up"/>
+        <TextView
+            android:id="@+id/praise_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray"
+            android:textSize="15dp"/>
+        <ImageView
+            android:id="@+id/down"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/down"/>
+
+        <ImageView
+            android:id="@+id/comment_area"
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/answer_brief"/>
+        <TextView
+            android:id="@+id/comment_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray"
+            android:textSize="15dp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="25dp"
+            android:src="@drawable/collect"/>
+        <TextView
+            android:id="@+id/share_num"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="0"
+            android:gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/light_gray"
+            android:textSize="15dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

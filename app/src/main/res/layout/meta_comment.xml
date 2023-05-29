@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:layout_height="wrap_content">
+
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <LinearLayout
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:orientation="horizontal">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/comment_profile"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/pikachuar"/>
+            <LinearLayout
+                android:layout_marginStart="5dp"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/comment_man"
+                    android:layout_width="wrap_content"
+                    android:layout_height="18dp"
+                    android:text="KunKun"
+                    android:textColor="@color/black"
+                    android:textSize="12dp"/>
+                <TextView
+                    android:id="@+id/comment_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="12dp"
+                    android:text="2023-5-19"
+                    android:textColor="@color/light_black"
+                    android:textSize="10dp"/>
+            </LinearLayout>
+
+            <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1" />
+            <TextView
+                android:id="@+id/praise_nums"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:text="23"
+                android:textColor="@color/theme_gray"
+                android:textSize="12dp"
+                android:gravity="center"/>
+            <ImageView
+                android:id="@+id/praise"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart_no_praise"/>
+
+        </LinearLayout>
+        <TextView
+            android:padding="5dp"
+            android:layout_marginTop="3dp"
+            android:id="@+id/comment_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="10dp"
+            android:textColor="@color/black"
+            android:textSize="18dp"
+            android:textIsSelectable="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/answers"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_marginStart="30dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:layout_height="wrap_content"/>-->
+        <ImageView
+            android:id="@+id/post_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:scaleType="fitCenter"/>
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="6dp"
+            android:layout_margin="16dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/lightest_gray"/>
+
+    </LinearLayout>
+</LinearLayout>
+

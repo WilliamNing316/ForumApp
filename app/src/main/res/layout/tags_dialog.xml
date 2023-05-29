@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="180dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="10dp"
+    android:backgroundTint="@color/maintheme">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:paddingBottom="30dp"
+        android:paddingTop="20dp"
+        android:layout_height="wrap_content">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/lightest_gray"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textSize="14dp"
+                android:id="@+id/study"
+                android:text="学习"/>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/lightest_gray"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textSize="14dp"
+                android:id="@+id/entertainment"
+                android:text="娱乐"/>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/lightest_gray"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textSize="14dp"
+                android:id="@+id/help"
+                android:text="求助"/>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/lightest_gray"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textSize="14dp"
+                android:id="@+id/transaction"
+                android:text="交易"/>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="60dp"
+            app:cardCornerRadius="15dp"
+            android:backgroundTint="@color/lightest_gray"
+            android:layout_height="30dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:background="@color/white"
+                android:textSize="14dp"
+                android:id="@+id/notag"
+                android:text="无"/>
+        </androidx.cardview.widget.CardView>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

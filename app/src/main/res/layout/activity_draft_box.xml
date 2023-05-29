@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DraftBoxActivity">
+    <LinearLayout
+        android:id="@+id/draft_box"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+
+        <ImageView
+            android:id="@+id/draft"
+            android:layout_marginTop="2dp"
+            android:layout_width="34dp"
+            android:layout_height="35dp"
+            app:layout_constraintBottom_toBottomOf="@+id/top"
+            app:layout_constraintEnd_toStartOf="@id/next"
+            android:layout_marginEnd="5dp"
+            android:src="@drawable/draft"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="草稿箱"
+            android:textSize="18dp"
+            android:textColor="@color/light_black"
+            android:textAlignment="center"
+            android:gravity="center"/>
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <ImageView
+        android:id="@+id/top_barrier"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightest_gray"
+        app:layout_constraintTop_toBottomOf="@id/draft_box"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="5dp"
+        android:id="@+id/drafts_recycle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@+id/top_barrier"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
